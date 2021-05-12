@@ -22,7 +22,20 @@ My project will consist in evaluating the efficacy of rapport-building social co
 * [Bibliography](#bibliography)
 * [What I learned from this course](#learned)
 
-## <a name="code"></a>Reading the Data
+## <a name="code"></a>General description of the code and packages
+
+There are two python programs: functions.py (with the functions that we will require throughout the code) and main.py (with the actual data we are using)
+
+Throughout this README, I will explain the main.py first, and then add the relevant functions from the functions.py program. Although the packages required are included in functions.py, I will add them here for clarity:
+
+```python
+import pandas as pd
+from scipy import stats
+from statsmodels.formula.api import ols
+import pingouin as pg
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
 
 ## <a name="data"></a>Reading the data
 
