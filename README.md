@@ -169,13 +169,17 @@ Here is how the final database looks like:
 
 ## <a name="analyses"></a>Data analysis
 
-First, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the observer-rated “thin-slice” rapport) and learning outcomes on a post-test. 
+For the data analysis of these data, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the AMT-rated “thin-slice” rapport) and learning improvements from an algebra test done before the tutoring session with Jaden and a test done after. 
 
 ```python
 interesting_columns= ['Learning_gain_total','Learning_gain_conc','Learning_gain_proc','AMT_Rapport_Average', 'self_report_Rapport_Average']
 dataAnalysis(interesting_columns, full_usabledatabase)
 ```
-hola 
+
+### Function: dataAnalysis
+
+This function consists of all the different data analyses that we will perform with these data. In particular, it is composed of ANOVAs with condition as the independent variable and the different learning gains and rapport measures as the dependent variables; linear regressions with the same variables and some regressors such as gender and previous algebra experience; and a t-test between the two rapport measures: AMT ratings of rapport, and self-reported ratings of rapport. 
+
 ```python
 def dataAnalysis(interesting_columns, full_usabledatabase):
     """This function returns the outputs of the data analyses performed. In particular, it takes the columns of interest 
@@ -212,9 +216,6 @@ def dataAnalysis(interesting_columns, full_usabledatabase):
                     color='grey')
         plt.savefig(column+'.png')
 
-        
-        
-
     #to perform an ANOVA on all the interesting columns by condition:
     for column in interesting_columns:   
         aov = pg.anova(data=full_usabledatabase, dv=column, between='Condition', detailed=True)
@@ -250,15 +251,27 @@ def dataAnalysis(interesting_columns, full_usabledatabase):
 
     print(stats.ttest_ind(full_usabledatabase['self_report_Rapport_Average'], full_usabledatabase['AMT_Rapport_Average']))
 ```    
-    
-description and anovas:
 
-<img src="https://user-images.githubusercontent.com/65661142/118035271-4b3b9280-b36b-11eb-8535-df1499066a9d.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118035565-a79eb200-b36b-11eb-9e31-f101a6dc336f.png" width="90%"></img> 
+Here are the outputs of said function:
+
+### Descriptives of the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings.
+
+
+<img src="https://user-images.githubusercontent.com/65661142/118035271-4b3b9280-b36b-11eb-8535-df1499066a9d.png" width="90%"></img> 
+### Boxplots by Condition of the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings.
+
+<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%"></img> 
+<img src="https://user-images.githubusercontent.com/65661142/118031353-b9ca2180-b366-11eb-9df7-268d3ac8ec5d.png" width="90%"></img> 
+<img src="https://user-images.githubusercontent.com/65661142/118031357-ba62b800-b366-11eb-9f8f-a9f4841d3526.png" width="90%"></img> 
+
+
+<img src="https://user-images.githubusercontent.com/65661142/118031403-c6e71080-b366-11eb-9f07-f7c6fbfd34f6.png" width="90%"></img>  
+
+### ANOVAs by Condition of the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings.
+<img src="https://user-images.githubusercontent.com/65661142/118035565-a79eb200-b36b-11eb-9e31-f101a6dc336f.png" width="90%"></img> 
 
 Boxplots:
-<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%">
 
-<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031353-b9ca2180-b366-11eb-9df7-268d3ac8ec5d.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031357-ba62b800-b366-11eb-9f8f-a9f4841d3526.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031401-c64e7a00-b366-11eb-914d-20131a22af39.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031403-c6e71080-b366-11eb-9f07-f7c6fbfd34f6.png" width="90%"></img>  
 
 
 regressions: 
@@ -268,7 +281,7 @@ regressions:
 t-test:
 <img src="https://user-images.githubusercontent.com/65661142/118033192-d23b3b80-b368-11eb-8c34-ebbcac34842b.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033195-d2d3d200-b368-11eb-8da6-5950e382c354.png" width="45%"></img> 
 
-
+<img src="https://user-images.githubusercontent.com/65661142/118031401-c64e7a00-b366-11eb-914d-20131a22af39.png" width="90%"></img> 
 <img src="https://user-images.githubusercontent.com/65661142/118032560-1b3ec000-b368-11eb-8154-b0c7393efb6a.png" width="90%"></img> 
 ## <a name="future"></a>To do
 
