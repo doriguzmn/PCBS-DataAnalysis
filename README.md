@@ -51,9 +51,17 @@ learning = pd.read_excel('Dori-RAPT_WoZ_2019_learning-gain_condition.xlsx')
 participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
 ```
 
+ADD AN EXAMPLE OF EACH
+
 ## <a name="processing"></a>Data processing
 
-Once we read the Excel sheets, we need to do some processing. Our goal is to get a database that includes the participant demographic data (including participant gender, age, grade, school, previous algebra experience, Jaden's perceived gender/ethnicity, etc), the data about the learning of the subjects in the experiments (which includes how many problems participants solved before talking to Jaden, the virtual tutor, how many they solved after, a composite score measuring learning gains (after-before), etc), and the data 
+Once we read the Excel sheets, we need to do some processing. Our goal is to get a database that includes:
+-Participants' demographic data: participant gender, age, grade, school, previous algebra experience, Jaden's perceived gender/ethnicity, etc)
+-Participant's learning information: how many problems participants solved before talking to Jaden, the virtual tutor, how many they solved after, a composite score measuring learning gains (after-before), etc)
+-AMT 'thin-slice' rating of rapport: the rating of rapport for each 30-second slice of the tutoring videos with Jaden and a participant, in addition to a final rapport rating which is the average of all ratings from the individual slices for a certain participant.
+
+Importantly, the AMT ratings of rapport are only available for participants whose video is of high quality. Therefore, the final database will include these three THINGS only for a subset of participants, and this is what we will use for the data analysis. 
+
 ```python
 MergedDf = getUsableVideos(learning,participantData)[0]
 UsableVideos = getUsableVideos(learning,participantData)[1]
@@ -62,7 +70,9 @@ full_usabledatabase = getFullData(rapport, UsableVideos, MergedDf)
 ```
 ### Function: getUsableVideos
 
-First, we define a function called getUsableVideos, which requires the 
+First, we define a function called getUsableVideos, which has two goals:
+- It merges the participant demographic data with the learning information for all participants, outputing a merged dataframe that accomplishes
+-   
 
 ```python
 def getUsableVideos(learning,participantData):
