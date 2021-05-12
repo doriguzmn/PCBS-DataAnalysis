@@ -1,7 +1,7 @@
-# PCBS-DataAnalysis
-My project is part of the Rapport-Aware Peer Tutor, whose goal is to advance understanding of the nature of rapport development and its impact on learning processes and outcomes, in particular with virtual ECAs as tutors. The project is led by Justine Cassell. 
+# Rapport-Aware Peer Tutor Data Analysis
+My project is part of the Rapport-Aware Peer Tutor, whose goal is to advance understanding of the nature of the development of rapport and its impact on learning processes, in particular with virtual ECAs as tutors. The project is led by Justine Cassell. 
 
-In order to do this, over 100 hours of data of students tutoring each other in algebra were collected and the verbal and nonverbal behaviors that contribute to the rapport between them were analyzed. Findings showed that tutoring pairs with greater rapport engage in more of the socially-supportive behaviors like help-offering, explanation-prompting, comprehension-monitoring, and self-explanations (from tutees) indicative of positive, supportive climates for learning. Students whose rapport with their partner deepens over time also solve more problems and learn more on a post-test. 
+In order to study rapport in a human-human tutoring environment, over 100 hours of data of students tutoring each other in algebra were collected and the verbal and nonverbal behaviors that contribute to the development rapport between them were analyzed. Findings showed that tutoring pairs with greater rapport engage in more of the socially-supportive behaviors like help-offering, explanation-prompting, comprehension-monitoring, and self-explanations (from tutees) indicative of positive, supportive climates for learning. Students whose rapport with their partner deepens over time also solve more problems and learn more on a post-test. 
 
 As a result of this work, the first computational model of rapport was developed, which allowed Justine's Cassell's team to design a virtual peer tutor, Jaden, that can develop rapport with a student to better support them in learning. 
 
