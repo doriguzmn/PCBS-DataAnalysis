@@ -53,13 +53,14 @@ participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
 
 ## <a name="processing"></a>Data processing
 
+Once we read the Excel sheets, we need to do some processing. Our goal is to get a database that includes the participant demographic data (including participant gender, age, grade, school, previous algebra experience, Jaden's perceived gender/ethnicity, etc), the data about the learning of the subjects in the experiments (which includes how many problems participants solved before talking to Jaden, the virtual tutor, how many they solved after, a composite score measuring learning gains (after-before), etc), and the data 
 ```python
 MergedDf = getUsableVideos(learning,participantData)[0]
 UsableVideos = getUsableVideos(learning,participantData)[1]
 
 full_usabledatabase = getFullData(rapport, UsableVideos, MergedDf)
 ```
-### getUsableVideos
+### Function: getUsableVideos
 
 First, we define a function called getUsableVideos, which requires the 
 
@@ -91,6 +92,55 @@ def getUsableVideos(learning,participantData):
     return mergeddf, UsableVideos
 ```
 
+HOla 
+
+```python
+def getFullData(rapport, UsableVideos, mergeddf):
+    """This function returns a database merging the merged usable data obtained above, with the rapport ratings that AMT workers gave for each slice of 
+    a participant's video, plus a column with the average slice rating for said video.
+
+    inputs: 
+        - rapport: dataframe containing the "thin-sliced" rapport ratings provided by AMT workers. Workers rated the rapport between Jaden and the participant,
+        for each 30-second slice of a video. 
+        - UsableVideos: same as above 
+        - mergeddf : same as above
+
+    outputs:
+        - full_usabledatabase: dataframe merging UsableVideos and rapport. Therefore, it has demographic information about the participant, 
+        about the participants' learning gains and the rapport ratings by AMT workers, both the individual slices and the total average for each video. 
+        Video and participant are, in this dataframe, equivalent, as we only have videos for participants in the UsableVideos dataframe.
+    """
+    #first, I create a dictionary for each video (keys) that has the ratings for all slices (values)
+    rapportvideo = {}
+    for _, row in rapport.iterrows():
+        if row['Video'] in rapportvideo:
+            rapportvideo[row['Video']].append(row['Rating'])
+        else:
+            rapportvideo[row['Video']] = list()
+            rapportvideo[row['Video']].append(row['Rating'])
+
+    #create a data set from this dictionary, with one participant (or video) in each row and all the individual slice ratings as the columns:
+    rapport_dataset= pd.DataFrame.from_dict(rapportvideo, orient='index').reset_index(level=0)
+    rapport_dataset= rapport_dataset.add_prefix('AMT_Slice_')
+    rapport_dataset = rapport_dataset.rename(columns={'AMT_Slice_index':'Participant'})
+
+    #get the average of all the slices, and put them in a new column (Note: I had to remove the participant column first to do this)
+    select=rapport_dataset.drop('Participant', axis=1)
+    rapport_dataset.insert(83, 'AMT_Rapport_Average', select.mean(axis=1))
+
+    #To merge rapport_database with the previous data (i.e. usablevideos)
+    full_usabledatabase = UsableVideos.merge(rapport_dataset, on='Participant')
+
+    #to save the Excelsheets:
+    rapport_dataset.to_excel("WoZ_2019_AMTRatings.xlsx", index=False)
+
+    with pd.ExcelWriter('WoZ_2019_FullData.xlsx') as writer:   
+        mergeddf.to_excel(writer, sheet_name='AllVideos', index=False)
+        full_usabledatabase.to_excel(writer, sheet_name='UsableVideos', index=False)
+
+    return full_usabledatabase
+
+```
 ## <a name="analyses"></a>Data analysis
 
 First, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the observer-rated “thin-slice” rapport) and learning outcomes on a post-test. 
