@@ -164,6 +164,10 @@ interesting_columns= ['Learning_gain_total','Learning_gain_conc','Learning_gain_
 dataAnalysis(interesting_columns, full_usabledatabase)
 ```
 
+description and anovas:
+
+<img src="https://user-images.githubusercontent.com/65661142/118035271-4b3b9280-b36b-11eb-8535-df1499066a9d.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118035565-a79eb200-b36b-11eb-9e31-f101a6dc336f.png" width="90%"></img> 
+
 Boxplots:
 <img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%">
 
