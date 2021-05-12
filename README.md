@@ -15,16 +15,18 @@ My project will consist in evaluating the efficacy of rapport-building social co
 
 #### Table of Contents
 
-* [Defining the Functions](#functions)
+* [Code General Description](#code)
 * [Reading the Data](#data)
 * [Data analysis](#analyses)
 * [To Do](#future)
 * [Bibliography](#bibliography)
 * [What I learned from this course](#learned)
 
-## <a name="functions"></a>Defining the Functions in functions.py
+## <a name="data"></a>Reading the Data
 
-In functions.py, there are 3 functions defined, which will help us when we run the main.py code. First, we install the packages required.
+## <a name="data"></a>Reading the Data
+
+First, we install the packages required.
 
 ```python
 import pandas as pd
@@ -34,6 +36,39 @@ import pingouin as pg
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
+
+### getUsableVideos
+
+First, we define a function called getUsableVideos, which requires the 
+
+```python
+def getUsableVideos(learning,participantData):
+    ""This functions returns the usable videos by (1) merging participant and learning data (and deleting a repeated column: 'Study_Condition') 
+    and (2) subsetting the subjects whose videos are usable (some videos did not have enough quality).
+
+    inputs: 
+        - learning: This dataframe has the information about the learning of the subjects in the experiment. It includes how many problems they 
+        solved before talking to Jaden, the virtual tutor, how many they solved after, and a composite score measuring learning gains (after-before). 
+        There are two different types of algebra question: those about conceptual learning, and those about procedural learning. The total learning 
+        variables are merging those two types of question.
+        - participantData: This dataframe has the participant information: participant gender, age, grade, school, previous algebra experience, 
+        Jaden's perceived gender/ethnicity ... It also contains the self-reported rating of the rapport experienced in the interaction between Jaden and the student.
+
+    outputs: 
+        -mergeddf: this dataframe has the merged information of the two dataframes above (i.e. learning and participantData)
+        - UsableVideos: mergeddf but subsetting for the participants whose videos are of high quality 
+        and were thus used to obtain the "thin-sliced" ratings in Amazon Mechanical Turk (explained below).
+    """
+    #1. merge the participant and learning data 
+    mergeddf = learning.merge(participantData, on='Participant')
+    mergeddf = mergeddf.drop('Study_Condition', axis=1)
+
+    #2. subset the subjects whose videos are usable 
+    UsableVideos = mergeddf[mergeddf["Usable"]=="Y"]
+
+    return mergeddf, UsableVideos
+```
+
 ## <a name="data"></a>Reading the Data
 
 ## <a name="analyses"></a>Data analysis
