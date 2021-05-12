@@ -53,6 +53,8 @@ participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
 
 ADD AN EXAMPLE OF EACH
 
+ <img src="https://user-images.githubusercontent.com/65661142/118037238-dd449a80-b36d-11eb-9150-b2b135d85e31.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118037239-dddd3100-b36d-11eb-84d9-e6b85d9ae10e.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118037242-de75c780-b36d-11eb-9c3f-cb2d19b444b1.png" width="90%"></img> 
+ 
 ## <a name="processing"></a>Data processing
 
 Once we read the Excel sheets, we need to do some processing. Our goal is to get a database that includes:
@@ -154,6 +156,8 @@ def getFullData(rapport, UsableVideos, mergeddf):
 ```
 
 HERE IS HOW THE FINAL DATAFRAME LOOKS LIKE:
+
+<img src="https://user-images.githubusercontent.com/65661142/118037237-dc136d80-b36d-11eb-987a-5a5b342d161a.png" width="90%"></img>
 
 ## <a name="analyses"></a>Data analysis
 
