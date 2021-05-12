@@ -15,16 +15,16 @@ My project will consist in evaluating the efficacy of rapport-building social co
 
 #### Table of Contents
 
-* [Code General Description](#code)
-* [Reading the Data](#data)
+* [General description of the code](#code)
+* [Reading the data](#data)
 * [Data analysis](#analyses)
-* [To Do](#future)
+* [To do](#future)
 * [Bibliography](#bibliography)
 * [What I learned from this course](#learned)
 
-## <a name="data"></a>Reading the Data
+## <a name="code"></a>Reading the Data
 
-## <a name="data"></a>Reading the Data
+## <a name="data"></a>Reading the data
 
 First, we install the packages required.
 
@@ -69,13 +69,11 @@ def getUsableVideos(learning,participantData):
     return mergeddf, UsableVideos
 ```
 
-## <a name="data"></a>Reading the Data
-
 ## <a name="analyses"></a>Data analysis
 
 First, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the observer-rated “thin-slice” rapport) and learning outcomes on a post-test. 
 
-## <a name="future"></a>To Do
+## <a name="future"></a>To do
 
 If time allows, I will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
 
