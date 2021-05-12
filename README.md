@@ -16,8 +16,9 @@ My project will consist in evaluating the efficacy of rapport-building social co
 
 I collected rapport ratings of 30-second slices from Jaden's tutoring sessions using Amazon Mechanical Turk (i.e. "thin-slice rapport), and I will use these data to evaluate the relationship between rapport and learning. First, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the observer-rated “thin-slice” rapport) and learning outcomes on a post-test. If time allows, I will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
 
+Madaio, M., Peng, K., Ogan, A., & Cassell, J. (2018). A climate of support: a process-oriented analysis of the impact of rapport on peer tutoring. International Society of the Learning Sciences, Inc.[ISLS].
 
-
+Sinha, T., & Cassell, J. (2015, November). We click, we align, we learn: Impact of influence and convergence processes on student learning and rapport building. In Proceedings of the 1st Workshop on Modeling INTERPERsonal SynchrONy And infLuence (pp. 13-20).
 
 
 
