@@ -51,10 +51,18 @@ learning = pd.read_excel('Dori-RAPT_WoZ_2019_learning-gain_condition.xlsx')
 participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
 ```
 
-ADD AN EXAMPLE OF EACH
+To help understand the rest of the code, here are the first few rows of each Excel sheet (explained below):
 
- <img src="https://user-images.githubusercontent.com/65661142/118037238-dd449a80-b36d-11eb-9150-b2b135d85e31.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118037239-dddd3100-b36d-11eb-84d9-e6b85d9ae10e.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118037242-de75c780-b36d-11eb-9c3f-cb2d19b444b1.png" width="90%"></img> 
+### AMT rapport ratings 
+ <img src="https://user-images.githubusercontent.com/65661142/118037242-de75c780-b36d-11eb-9c3f-cb2d19b444b1.png" width="90%"></img> 
+
+### Learning data
+<img src="https://user-images.githubusercontent.com/65661142/118037239-dddd3100-b36d-11eb-84d9-e6b85d9ae10e.png" width="90%"></img>
+
+### Participant demographics
+<img src="https://user-images.githubusercontent.com/65661142/118037238-dd449a80-b36d-11eb-9150-b2b135d85e31.png" width="90%"></img>
  
+
 ## <a name="processing"></a>Data processing
 
 Once we read the Excel sheets, we need to do some processing. Our goal is to get a database that includes:
