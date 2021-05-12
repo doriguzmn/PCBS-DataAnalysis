@@ -51,7 +51,7 @@ learning = pd.read_excel('Dori-RAPT_WoZ_2019_learning-gain_condition.xlsx')
 participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
 ```
 
-To help understand the rest of the code, here are the first few rows of each Excel sheet (explained below):
+To help understand the rest of the code, here are the first few rows of each Excel sheet, which are explained below:
 
 ### AMT rapport ratings 
  <img src="https://user-images.githubusercontent.com/65661142/118037242-de75c780-b36d-11eb-9c3f-cb2d19b444b1.png" width="90%"></img> 
@@ -70,7 +70,7 @@ Once we read the Excel sheets, we need to do some processing. Our goal is to get
 -Participant's learning information: how many problems participants solved before talking to Jaden, the virtual tutor, how many they solved after, a composite score measuring learning gains (after-before), etc)
 -AMT 'thin-slice' rating of rapport: the rating of rapport for each 30-second slice of the tutoring videos with Jaden and a participant, in addition to a final rapport rating which is the average of all ratings from the individual slices for a certain participant.
 
-Importantly, the AMT ratings of rapport are only available for participants whose video is of high quality. Therefore, the final database will include these three THINGS only for a subset of participants, and this is what we will use for the data analysis. 
+Importantly, the AMT ratings of rapport are only available for participants whose video is of high quality. Therefore, the final database will include these three sets of information only for a subset of participants, and this subset is what we will use for the data analysis. 
 
 ```python
 MergedDf = getUsableVideos(learning,participantData)[0]
@@ -163,7 +163,7 @@ def getFullData(rapport, UsableVideos, mergeddf):
 
 ```
 
-HERE IS HOW THE FINAL DATAFRAME LOOKS LIKE:
+Here is how the final database looks like:
 
 <img src="https://user-images.githubusercontent.com/65661142/118037237-dc136d80-b36d-11eb-987a-5a5b342d161a.png" width="90%"></img>
 
