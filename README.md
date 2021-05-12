@@ -102,7 +102,8 @@ def getUsableVideos(learning,participantData):
     return mergeddf, UsableVideos
 ```
 
-Now, we will merge the 
+### Function: getFullData
+Now, we will merge the AMT rapport ratings with the database containing the demographic and learning information for participants whose video is of high quality. In order to do this, we call getFullData. As the format of the AMT ratings sheet is not the same as the format of the merged dataframe including demographic and learning information, first we created a dataframe with the AMT ratings in the same format as the latter. 
 
 ```python
 def getFullData(rapport, UsableVideos, mergeddf):
@@ -151,10 +152,17 @@ def getFullData(rapport, UsableVideos, mergeddf):
     return full_usabledatabase
 
 ```
+
+HERE IS HOW THE FINAL DATAFRAME LOOKS LIKE:
+
 ## <a name="analyses"></a>Data analysis
 
 First, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the observer-rated “thin-slice” rapport) and learning outcomes on a post-test. 
 
+```python
+interesting_columns= ['Learning_gain_total','Learning_gain_conc','Learning_gain_proc','AMT_Rapport_Average', 'self_report_Rapport_Average']
+dataAnalysis(interesting_columns, full_usabledatabase)
+```
 
 ## <a name="future"></a>To do
 
