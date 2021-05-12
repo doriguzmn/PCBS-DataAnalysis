@@ -331,5 +331,7 @@ Sinha, T., & Cassell, J. (2015, November). We click, we align, we learn: Impact 
 
 ## <a name="learned"></a>What I learned from this course
 
-My level 
+Before this semester, I didn't know what GitHub was, I never succeeded at changing directory in the terminal and I definitely could not have written this script! I had taken some DataCamp classes on data analysis last semester, so I vagely knew what panda and matplotlib were, but that was the extent of my coding experience. This semester, learning how to code was really my goal, and I can say that I'm happy with my level now. Of course, there are a lot of programs that I can't personally write, but I do understand the general thinking behind a code, and how to spell out the requirements of a program so that other people can write it. Moreover, doing this project I understood the value of feedback: I decided to do functions after I got feedback saying that it is much clearer to have a functions.py file which explains everything, and not that much code on the main.py program. 
+
+All in all, I learned immensely about the way of thinking that is required to code, and I'm very glad that I took this class. Thank you!
 
