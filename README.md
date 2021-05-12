@@ -164,6 +164,8 @@ interesting_columns= ['Learning_gain_total','Learning_gain_conc','Learning_gain_
 dataAnalysis(interesting_columns, full_usabledatabase)
 ```
 
+<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%">
+
 ## <a name="future"></a>To do
 
 If time allows, I will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
