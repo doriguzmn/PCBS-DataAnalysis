@@ -40,14 +40,25 @@ import seaborn as sns
 
 ## <a name="data"></a>Reading the data
 
+We read the 3 Excel sheets that are needed for this data analysis:
+
+```python
 #read the Excel sheet with the rapport ratings obtained using AMT 
 rapport = pd.read_excel ('AllSlicesData_NiceFormat_edited.xlsx')
 
 #read the Excel with participant data and learning data
 learning = pd.read_excel('Dori-RAPT_WoZ_2019_learning-gain_condition.xlsx')
 participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
+```
 
+## <a name="processing"></a>Data processing
 
+```python
+MergedDf = getUsableVideos(learning,participantData)[0]
+UsableVideos = getUsableVideos(learning,participantData)[1]
+
+full_usabledatabase = getFullData(rapport, UsableVideos, MergedDf)
+```
 ### getUsableVideos
 
 First, we define a function called getUsableVideos, which requires the 
@@ -79,7 +90,6 @@ def getUsableVideos(learning,participantData):
 
     return mergeddf, UsableVideos
 ```
-## <a name="processing"></a>Data processing
 
 ## <a name="analyses"></a>Data analysis
 
