@@ -21,7 +21,7 @@ My project will consist in evaluating the efficacy of rapport-building social co
 * [Reading the data](#data)
 * [Data processing](#processing)
 * [Data analysis](#analyses)
-* [To do](#future)
+* [Discussion and Future directions](#discussion)
 * [Bibliography](#bibliography)
 * [What I learned from this course](#learned)
 
@@ -318,11 +318,10 @@ We also computed a t-test to investigate differences between AMT rapport ratings
 ### Statistics
 <img src="https://user-images.githubusercontent.com/65661142/118032560-1b3ec000-b368-11eb-8154-b0c7393efb6a.png" width="90%"></img> 
 
-## <a name="future"></a>To do
 
-It has been claimed that merely calculating the average of rapport for a full video is not the most useful way to investigate the development of rapport, as rapport is constantly changing (Madaio, Peng, Ogan, & Cassell, 2018; Sinha & Cassell, 2015). 
+## <a name="discussion"></a>Discussion and Future directions
 
-the future, we will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
+There are no significant effects throughout this data analysis. This might be because the new dataset, which included only participants with videos of high quality, reduced the data points considerably. Moreover, it has been claimed that merely calculating the average of rapport for a full video is not the most useful way to investigate the development of rapport, as rapport is constantly changing (Madaio, Peng, Ogan, & Cassell, 2018; Sinha & Cassell, 2015). Therefore, in the future, we will study not the average rating of rapport, but the change in rapport throughout the whole interaction. A more sophisticated analysis that will be conducted will use Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. We can then use this measure to see whether the amount of increase in rapport vary between conditions, and whether that influences learning gains.  
 
 ## <a name="bibliography"></a>Bibliography
 
@@ -332,4 +331,5 @@ Sinha, T., & Cassell, J. (2015, November). We click, we align, we learn: Impact 
 
 ## <a name="learned"></a>What I learned from this course
 
+My level 
 
