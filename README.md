@@ -39,6 +39,7 @@ import pingouin as pg
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
+Important: I have uploaded fake data, not the real one as it is confidencial, just so the code was checkable. 
 
 ## <a name="data"></a>Reading the data
 
