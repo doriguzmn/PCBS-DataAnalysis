@@ -71,8 +71,8 @@ full_usabledatabase = getFullData(rapport, UsableVideos, MergedDf)
 ### Function: getUsableVideos
 
 First, we define a function called getUsableVideos, which has two goals:
-- It merges the participant demographic data with the learning information for all participants, outputing a merged dataframe that accomplishes
--   
+- It merges the participant demographic data with the learning information for all participants, outputing a merged dataframe that accomplishes the first two THINGS mentioned above (in the outputs below: mergeddf)
+- From said merged dataframe, it subsets the participants whose video has a high quality, and thus has the AMT rapport ratings (in the outputs below: UsableVideos)
 
 ```python
 def getUsableVideos(learning,participantData):
@@ -102,11 +102,11 @@ def getUsableVideos(learning,participantData):
     return mergeddf, UsableVideos
 ```
 
-HOla 
+Now, we will merge the 
 
 ```python
 def getFullData(rapport, UsableVideos, mergeddf):
-    """This function returns a database merging the merged usable data obtained above, with the rapport ratings that AMT workers gave for each slice of 
+    """This function returns a database merging the merged usable data UsableVideos, with the rapport ratings that AMT workers gave for each slice of 
     a participant's video, plus a column with the average slice rating for said video.
 
     inputs: 
