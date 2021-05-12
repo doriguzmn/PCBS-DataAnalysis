@@ -17,6 +17,7 @@ My project will consist in evaluating the efficacy of rapport-building social co
 
 * [General description of the code](#code)
 * [Reading the data](#data)
+* [Data processing](#processing)
 * [Data analysis](#analyses)
 * [To do](#future)
 * [Bibliography](#bibliography)
@@ -39,16 +40,13 @@ import seaborn as sns
 
 ## <a name="data"></a>Reading the data
 
-First, we install the packages required.
+#read the Excel sheet with the rapport ratings obtained using AMT 
+rapport = pd.read_excel ('AllSlicesData_NiceFormat_edited.xlsx')
 
-```python
-import pandas as pd
-from scipy import stats
-from statsmodels.formula.api import ols
-import pingouin as pg
-import matplotlib.pyplot as plt
-import seaborn as sns
-```
+#read the Excel with participant data and learning data
+learning = pd.read_excel('Dori-RAPT_WoZ_2019_learning-gain_condition.xlsx')
+participantData=pd.read_excel('Dori-RAPT_WoZ_participant_data.xlsx')
+
 
 ### getUsableVideos
 
@@ -81,10 +79,12 @@ def getUsableVideos(learning,participantData):
 
     return mergeddf, UsableVideos
 ```
+## <a name="processing"></a>Data processing
 
 ## <a name="analyses"></a>Data analysis
 
 First, I will analyze condition differences on student's rapport (both self-reported on the post-tutoring session surveys, and the observer-rated “thin-slice” rapport) and learning outcomes on a post-test. 
+
 
 ## <a name="future"></a>To do
 
