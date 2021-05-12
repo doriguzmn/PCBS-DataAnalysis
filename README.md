@@ -166,6 +166,8 @@ dataAnalysis(interesting_columns, full_usabledatabase)
 
 <img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%">
 
+<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031353-b9ca2180-b366-11eb-9df7-268d3ac8ec5d.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031357-ba62b800-b366-11eb-9f8f-a9f4841d3526.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031401-c64e7a00-b366-11eb-914d-20131a22af39.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118031403-c6e71080-b366-11eb-9f07-f7c6fbfd34f6.png" width="90%"></img>  
+
 ## <a name="future"></a>To do
 
 If time allows, I will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
