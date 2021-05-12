@@ -22,8 +22,18 @@ My project will consist in evaluating the efficacy of rapport-building social co
 * [Bibliography](#bibliography)
 * [What I learned from this course](#learned)
 
-## <a name="functions"></a>Defining the Functions
+## <a name="functions"></a>Defining the Functions in functions.py
 
+In functions.py, there are 3 functions defined, which will help us when we run the main.py code. First, we install the packages required.
+
+```python
+import pandas as pd
+from scipy import stats
+from statsmodels.formula.api import ols
+import pingouin as pg
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
 ## <a name="data"></a>Reading the Data
 
 ## <a name="analyses"></a>Data analysis
