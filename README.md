@@ -260,32 +260,65 @@ Here are the outputs of said function:
 <img src="https://user-images.githubusercontent.com/65661142/118035271-4b3b9280-b36b-11eb-8535-df1499066a9d.png" width="90%"></img> 
 ### Boxplots by Condition of the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings.
 
-<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%"></img> 
+#### Total learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118031174-84bdcf00-b366-11eb-8261-8375c2faf8a2.png" width="90%"></img>
+#### Conceptual learning gains
 <img src="https://user-images.githubusercontent.com/65661142/118031353-b9ca2180-b366-11eb-9df7-268d3ac8ec5d.png" width="90%"></img> 
+#### Procedural learning gains
 <img src="https://user-images.githubusercontent.com/65661142/118031357-ba62b800-b366-11eb-9f8f-a9f4841d3526.png" width="90%"></img> 
-
-
+#### AMT rapport ratings
+<img src="https://user-images.githubusercontent.com/65661142/118040560-f8190e00-b371-11eb-8820-e3da34d608b3.png" width="90%"></img>
+#### Self-report rapport ratings
 <img src="https://user-images.githubusercontent.com/65661142/118031403-c6e71080-b366-11eb-9f07-f7c6fbfd34f6.png" width="90%"></img>  
 
 ### ANOVAs by Condition of the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings.
 <img src="https://user-images.githubusercontent.com/65661142/118035565-a79eb200-b36b-11eb-9e31-f101a6dc336f.png" width="90%"></img> 
 
-Boxplots:
 
+### Linear Regressions: Condition ~ the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings.
 
+These regressions were performed because they had already been done previously by another researcher, and we wanted to rerun the analyses with the correct data, the participants whose video was good quality, and add the regression with the newly-acquired AMT rapport ratings.
+#### Total learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118033714-6dccac00-b369-11eb-93ac-c4c4e502b1d8.png" width="90%"></img>
+#### Conceptual learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118033718-6e654280-b369-11eb-85bc-52fca8dc7197.png" width="90%"></img> 
+#### Procedural learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118033720-6efdd900-b369-11eb-8ede-5649e5254b0e.png" width="90%"></img> 
+#### AMT rapport ratings
+<img src="https://user-images.githubusercontent.com/65661142/118033721-6efdd900-b369-11eb-95db-699572c7838e.png" width="90%"></img>
+#### Self-report rapport ratings
+<img src="https://user-images.githubusercontent.com/65661142/118033723-6f966f80-b369-11eb-8562-199af1219ef0.png" width="90%"></img>
 
-regressions: 
+### Linear Regressions with regressors: Condition ~ the five variables of interest: total learning gains (conc + proc), conceptual learning gains, procedural learning gains, AMT rapport ratings and self-report rapport ratings. Regressors were Student_Gender + Grade + Algebra_experience.
 
-<img src="https://user-images.githubusercontent.com/65661142/118033714-6dccac00-b369-11eb-93ac-c4c4e502b1d8.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033718-6e654280-b369-11eb-85bc-52fca8dc7197.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033720-6efdd900-b369-11eb-8ede-5649e5254b0e.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033721-6efdd900-b369-11eb-95db-699572c7838e.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033723-6f966f80-b369-11eb-8562-199af1219ef0.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033724-6f966f80-b369-11eb-9062-f7152a491d1e.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033725-6f966f80-b369-11eb-9266-a21c06cea996.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033726-702f0600-b369-11eb-99b4-c8af2f231913.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033727-702f0600-b369-11eb-82cc-462c3c69ccf4.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033728-702f0600-b369-11eb-9aa3-be4dbda92462.png" width="90%"></img> 
+#### Total learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118033724-6f966f80-b369-11eb-9062-f7152a491d1e.png" width="90%"></img>
+#### Conceptual learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118033725-6f966f80-b369-11eb-9266-a21c06cea996.png" width="90%"></img>
+#### Procedural learning gains
+<img src="https://user-images.githubusercontent.com/65661142/118033726-702f0600-b369-11eb-99b4-c8af2f231913.png" width="90%"></img> 
+#### AMT rapport ratings
+<img src="https://user-images.githubusercontent.com/65661142/118033727-702f0600-b369-11eb-82cc-462c3c69ccf4.png" width="90%"></img>
+#### Self-report rapport ratings
+<img src="https://user-images.githubusercontent.com/65661142/118033728-702f0600-b369-11eb-9aa3-be4dbda92462.png" width="90%"></img> 
 
-t-test:
-<img src="https://user-images.githubusercontent.com/65661142/118033192-d23b3b80-b368-11eb-8c34-ebbcac34842b.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/65661142/118033195-d2d3d200-b368-11eb-8da6-5950e382c354.png" width="45%"></img> 
+### t-test between different rapport ratings:
 
+We also computed a t-test to investigate differences between AMT rapport ratings and self-report rapport ratings. 
+
+#### Descriptives
+<img src="https://user-images.githubusercontent.com/65661142/118033192-d23b3b80-b368-11eb-8c34-ebbcac34842b.png" width="45%"></img>
+<img src="https://user-images.githubusercontent.com/65661142/118033195-d2d3d200-b368-11eb-8da6-5950e382c354.png" width="45%"></img> 
+
+#### Boxplot
 <img src="https://user-images.githubusercontent.com/65661142/118031401-c64e7a00-b366-11eb-914d-20131a22af39.png" width="90%"></img> 
+
+### Statistics
 <img src="https://user-images.githubusercontent.com/65661142/118032560-1b3ec000-b368-11eb-8154-b0c7393efb6a.png" width="90%"></img> 
+
 ## <a name="future"></a>To do
 
-If time allows, I will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
+In the future, we will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
 
 ## <a name="bibliography"></a>Bibliography
 
