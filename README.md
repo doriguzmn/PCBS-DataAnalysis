@@ -175,7 +175,82 @@ First, I will analyze condition differences on student's rapport (both self-repo
 interesting_columns= ['Learning_gain_total','Learning_gain_conc','Learning_gain_proc','AMT_Rapport_Average', 'self_report_Rapport_Average']
 dataAnalysis(interesting_columns, full_usabledatabase)
 ```
+hola 
+```python
+def dataAnalysis(interesting_columns, full_usabledatabase):
+    """This function returns the outputs of the data analyses performed. In particular, it takes the columns of interest 
+    and the full usable dataset, and returns the output of the ANOVA (each column by condition) and that of the linear regression 
+    between each column and condition (with and without regressors). Moreover, it returns the output of a t-test between
+    the participants' self-reported rapport rating and the AMT-obtained rapport ratings.
 
+
+    inputs: 
+        - interesting_columns: columns that we want to use in the analyses. In this case, those describing the total 
+        learning gains, the conceptual learning gains, the procedural learning gains, the average of all slice ratings
+        provided by AMT, and the self-reported rapport rating provided by the participant.
+        - full_usabledatabase: 
+
+    outputs:
+        - outputs from the ANOVA, linear regression and t-test analyses. If running on the terminal, the graphs will
+        be saved, and the outputs will be printed on the terminal. 
+    """
+    
+    splitdata= full_usabledatabase.groupby('Condition')
+    
+    for column in interesting_columns:
+        print(column, splitdata[column].describe())
+        plt.figure()
+        sns.boxplot(y=column, x='Condition', order=["Task-only",'Fixed','Adaptive'], 
+                    data=full_usabledatabase, 
+                    palette="colorblind")
+        sns.stripplot(y=column, x='Condition', order=["Task-only",'Fixed','Adaptive'],
+                    data=full_usabledatabase, 
+                    jitter=True,
+                    dodge=True, 
+                    marker='o', 
+                    alpha=0.5,
+                    color='grey')
+        plt.savefig(column+'.png')
+
+        
+        
+
+    #to perform an ANOVA on all the interesting columns by condition:
+    for column in interesting_columns:   
+        aov = pg.anova(data=full_usabledatabase, dv=column, between='Condition', detailed=True)
+        print(column, aov)
+
+    #to do a regression, as that was significant in a previous analysis that I want to replicate using the usable data (I used this package osl because the models I based myself on were created in R )
+
+    for column in interesting_columns:
+        formula= column + str(' ~ ') + "Condition"
+        model = ols(formula, data=full_usabledatabase)
+        fitted_model = model.fit()
+        print(column, fitted_model.summary())
+        
+    #to include more regressors in the regression:
+
+    for column in interesting_columns:
+        formularegressors = column + str(' ~ ') + "Condition + Student_Gender + Grade + Algebra_experience"
+        model = ols(formularegressors, data=full_usabledatabase)
+        fitted_model = model.fit()
+        print(column, fitted_model.summary())
+
+    #Lastly, to investigate whether the self-reported rapport and the AMT-obtained rapport are different, I get the descriptives, draw a boxplot and perform a t-test:
+    print(full_usabledatabase['self_report_Rapport_Average'].describe())
+    print(full_usabledatabase['AMT_Rapport_Average'].describe())
+
+    f, (ax1, ax2) = plt.subplots(1,2)
+    sns.boxplot(y=full_usabledatabase['self_report_Rapport_Average'], ax=ax1)
+    sns.boxplot(y=full_usabledatabase['AMT_Rapport_Average'], ax=ax2)
+    plt.setp(ax1, ylim=[2,6])
+    plt.setp(ax2, ylim=[2,6])
+    f.tight_layout(pad=2.0)
+    plt.savefig('reportedvsAMTrapport.png')
+
+    print(stats.ttest_ind(full_usabledatabase['self_report_Rapport_Average'], full_usabledatabase['AMT_Rapport_Average']))
+```    
+    
 description and anovas:
 
 <img src="https://user-images.githubusercontent.com/65661142/118035271-4b3b9280-b36b-11eb-8535-df1499066a9d.png" width="90%"></img> <img src="https://user-images.githubusercontent.com/65661142/118035565-a79eb200-b36b-11eb-9e31-f101a6dc336f.png" width="90%"></img> 
