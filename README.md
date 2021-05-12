@@ -1,5 +1,7 @@
 # Rapport-Aware Peer Tutor Data Analysis
-My project is part of the Rapport-Aware Peer Tutor, whose goal is to advance understanding of the nature of the development of rapport and its impact on learning processes, in particular with virtual ECAs as tutors. The project is led by Justine Cassell. 
+My project is part of the Rapport-Aware Peer Tutor, whose goal is to advance understanding of the nature of the development of rapport and its impact on learning processes, in particular with virtual ECAs as tutors. The project is led by Justine Cassell.
+
+Rapport defines the alignment of the participants in a conversation. This alignment can manifest in multiple ways, such as the smoothness of the conversation and the mutual understanding or closeness of the participants in the conversation. Here, a low level of rapport corresponds to a small alignment between the participants of a conversation, and contrary, a high level of rapport corresponds to a great alignment. 
 
 In order to study rapport in a human-human tutoring environment, over 100 hours of data of students tutoring each other in algebra were collected and the verbal and nonverbal behaviors that contribute to the development rapport between them were analyzed. Findings showed that tutoring pairs with greater rapport engage in more of the socially-supportive behaviors like help-offering, explanation-prompting, comprehension-monitoring, and self-explanations, all indicative of positive, supportive climates for learning (Madaio, Peng, Ogan, & Cassell, 2018; Sinha & Cassell, 2015). Students whose rapport with their partner deepens over time also solve more problems and learn more on a post-test. 
 
@@ -318,7 +320,9 @@ We also computed a t-test to investigate differences between AMT rapport ratings
 
 ## <a name="future"></a>To do
 
-In the future, we will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
+It has been claimed that merely calculating the average of rapport for a full video is not the most useful way to investigate the development of rapport, as rapport is constantly changing (Madaio, Peng, Ogan, & Cassell, 2018; Sinha & Cassell, 2015). 
+
+the future, we will conduct a more sophisticated analyses using Granger causality to understand how an agent’s social utterance in one thin-slice window may “Granger-cause” an increase in rapport in the subsequent slice. 
 
 ## <a name="bibliography"></a>Bibliography
 
